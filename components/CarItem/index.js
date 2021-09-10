@@ -5,7 +5,7 @@ import styles from './styles'
 
 const CarItem = (props) => {
 
-  const {name, tagLine, tagLineCTA, image} = props; 
+  const {name, tagline, taglineCTA, image} = props.car; 
 
   return (
     <View style={styles.carContainer}>
@@ -13,7 +13,7 @@ const CarItem = (props) => {
 
         <View style={styles.titles}>
           <Text style={styles.title}>{name}</Text>
-          <Text style={styles.subTitle}>{tagLine}{' '}<Text style={styles.subTitleCTA}>{tagLineCTA}</Text></Text>
+          <Text style={styles.subTitle}>{tagline}{' '}<Text style={styles.subTitleCTA}>{taglineCTA}</Text></Text>
         </View>
         <View style={styles.buttonsContainer}>
           <StyledButton type="primary" content="Custom Order" onPress={() => {console.warn("Custom Order was pressed")}} />
